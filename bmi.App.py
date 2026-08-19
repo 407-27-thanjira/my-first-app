@@ -8,13 +8,15 @@ st.write("กรอกข้อมูลน้ำหนักและส่ว�
 weight = st.number_input("กรอกน้ำหนักของคุณ (กิโลกรัม):")
 height_cm = st.number_input("กรอกส่วนสูงของคุณ (เซนติเมตร):")
 
-#ส่วนที่ 3 คำนวณและแสดงผลลัพธ์
-if weight > 0 and height_cm > 0:
-    # แปลงส่วนสูงจากเซนติเมตรเป็นเมตร
-    height_m = height_cm / 100
-    # สูตรคำนวณ BMI = น้ำหนัก (kg) / ส่วนสูงกำลังสอง (m^2)
-    bmi = weight / (height_m ** 2)
-    
+#ส่วนที่ 3 สร้างปุ่มกดคำนวณ
+if st.button("คำนวณค่า BMI 🎯"):
+     # แปลงส่วนสูงจาก cm เป็น เมตร แล้วคำนวณ BMI
+      height_m = height_cm / 100
+      bmi = weight / (height_m ** 2)
+ 
+     st.write("---")
+     st.header(f"ค่า BMI ของคุณคือ: **{bmi:.2f}**")
+
   #ส่วนที่ 4 แปลผลค่า BMI ตามเกณฑ์
 if bmi < 18.5:
     st.warning("⚠️ คุณมีน้ำหนักน้อยกว่าเกณฑ์ (ผอม)")
