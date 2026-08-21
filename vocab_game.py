@@ -30,28 +30,28 @@ def show_result_dialog(ans1, ans2):
     u_ans2 = ans2.strip().lower()
 
     # ตรวจข้อ 1
-    if u_ans1 == "apple":
+    if ans1.strip().lower() == "apple":
         st.success("✅ ข้อ 1: ถูกต้อง")
         score += 1
     else:
         st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
 
     # ตรวจข้อ 2
-    if u_ans2 == "fish":
+    if ans2.strip().lower() == "fish":
         st.success("✅ ข้อ 2: ถูกต้อง")
         score += 1
     else:
         st.error(f"❌ ข้อ 2: ยังไม่ถูกต้อง (คุณตอบ '{u_ans2}')")
 
     # ตรวจข้อ 3
-    if u_ans3 == "pizza":
+    if ans3.strip().lower() == "pizza":
         st.success("✅ ข้อ 3: ถูกต้อง")
         score += 1
     else:
         st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{u_ans3}')")
 
    # ตรวจข้อ 4
-    if u_ans4 == "horse":
+    if ans4.strip().lower() == "horse":
         st.success("✅ ข้อ 4: ถูกต้อง")
         score += 1
     else:
